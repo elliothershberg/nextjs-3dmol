@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -8,6 +8,13 @@ import Script from "next/script";
 const Home: NextPage = () => {
   const [viewerLoaded, setviewerLoaded] = useState(false);
   const [uiLoaded, setUiLoaded] = useState(false);
+
+  useEffect(() => {
+    if (viewerLoaded && uiLoaded) {
+      // @ts-ignore
+      globalThis.$3Dmol.autoload();
+    }
+  }, [viewerLoaded, uiLoaded]);
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
