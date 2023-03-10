@@ -39,17 +39,30 @@ const Home: NextPage = () => {
         ></Script>
 
         {viewerLoaded && uiLoaded && (
-          <div className="w-full h-full">
-            Container:
-            <div
-              style={{ height: 400, width: 400, position: "relative" }}
-              className="viewer_3Dmoljs"
-              data-pdb="2POR"
-              data-backgroundcolor="0xffffff"
-              data-style="stick"
-              data-ui="true"
-            ></div>
-          </div>
+          <>
+            <div className="w-full h-full">
+              Container:
+              <div
+                style={{ height: 400, width: 400, position: "relative" }}
+                className="viewer_3Dmoljs"
+                data-pdb="2POR"
+                data-backgroundcolor="0xffffff"
+                data-style="stick"
+                data-ui="true"
+              ></div>
+            </div>
+            <div className="w-full h-full">
+              Container:
+              <div
+                style={{ height: 400, width: 400, position: "relative" }}
+                className="viewer_3Dmoljs"
+                data-pdb="1YCR"
+                data-backgroundcolor="0xffffff"
+                data-style="stick"
+                data-ui="true"
+              ></div>
+            </div>
+          </>
         )}
       </main>
 
